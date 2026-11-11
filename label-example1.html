@@ -1,0 +1,190 @@
+<!doctype html>
+ 
+<html lang="en"> 
+<head> 
+   <meta charset="utf-8">
+   <title> Accessibility exercise </title>
+</head>
+<body>
+  <header>
+    <h1> Accessibility exercises </h1>
+  </header>
+  <main>
+    <h2> ARIA exercise 1 </h2>
+    
+    <form>
+          <fieldset>
+            <legend> Contact us </legend>
+            <div class="form-control">
+              <img
+                src="icons/user.svg"
+                alt="Name"
+                aria-label="Name"
+                role="img"
+                tabindex="0"
+                class="form-icon"
+                onclick="document.getElementById('name').focus()"
+              />
+              <input type="text" id="name" aria-label="Name" />
+            </div>
+
+            <div class="form-control">
+              <img
+                src="icons/email.svg"
+                alt="e-mail"
+                aria-label="e-mail"
+                role="img"
+                tabindex="0"
+                class="form-icon"
+                onclick="document.getElementById('email').focus()"
+              />
+              <input
+                type="text"
+                id="email"
+                aria-label="e-mail"
+              />
+            </div>
+
+            <div class="form-control">
+              <img
+                src="icons/message.svg"
+                alt="Message"
+                aria-label="Message"
+                role="img"
+                tabindex="0"
+                class="form-icon"
+                onclick="document.getElementById('message').focus()"
+              />
+              <textarea
+                id="message"
+                cols="30"
+                rows="10"
+                aria-label="Message"
+              ></textarea>
+            </div>
+            <button type="submit" aria-label="Send">Send</button>
+        </fieldset>
+    </form>
+    <img alt="Phone" src="icons/phone.svg" class="phone-icon" /> +52 (333) 45 34 567
+  </main>
+</body>
+</html>
+
+<style>
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f8;
+  color: #333;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+h1 {
+  color: #2a9d8f;
+  margin-bottom: 20px;
+}
+
+/* Form container */
+form {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+}
+
+/* Fieldset and legend */
+fieldset {
+  border: 2px solid #2a9d8f;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+legend {
+  font-weight: bold;
+  color: #264653;
+  padding: 0 10px;
+}
+
+/* Form controls */
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-icon {
+  width: 22px;
+  height: 22px;
+  margin-top: 0 !important;
+  margin-bottom: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.form-icon:focus {
+  outline: 2px solid #2a9d8f;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Inputs and textarea */
+input[type="text"],
+textarea {
+  padding: 10px;
+  border: 2px solid #757575;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #1E7167;
+  box-shadow: 0 0 5px rgba(42, 157, 143, 0.3);
+  outline: none;
+}
+
+/* Submit button */
+input[type="submit"],
+button[type="submit"] {
+  background-color: #20796F;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  background-color: #21867a;
+}
+
+/* Contact info */
+img.phone-icon,
+.phone-icon {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  margin-top: 25px;
+}
+
+body > img + text,
+body > img + span,
+body > img + div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+</style>
