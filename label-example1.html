@@ -16,53 +16,26 @@
           <fieldset>
             <legend> Contact us </legend>
             <div class="form-control">
-              <img
-                src="icons/user.svg"
-                alt="Name"
-                aria-label="Name"
-                role="img"
-                tabindex="0"
-                class="form-icon"
-                onclick="document.getElementById('name').focus()"
-              />
-              <input type="text" id="name" aria-label="Name" />
+              <label for="name">
+                <img src="icons/user.svg" alt="Name" class="form-icon" />
+              </label>
+              <input type="text" id="name" />
             </div>
 
             <div class="form-control">
-              <img
-                src="icons/email.svg"
-                alt="e-mail"
-                aria-label="e-mail"
-                role="img"
-                tabindex="0"
-                class="form-icon"
-                onclick="document.getElementById('email').focus()"
-              />
-              <input
-                type="text"
-                id="email"
-                aria-label="e-mail"
-              />
+              <label for="email">
+                <img src="icons/email.svg" alt="e-mail" class="form-icon" />
+              </label>
+              <input type="text" id="email" />
             </div>
 
             <div class="form-control">
-              <img
-                src="icons/message.svg"
-                alt="Message"
-                aria-label="Message"
-                role="img"
-                tabindex="0"
-                class="form-icon"
-                onclick="document.getElementById('message').focus()"
-              />
-              <textarea
-                id="message"
-                cols="30"
-                rows="10"
-                aria-label="Message"
-              ></textarea>
+              <label for="message">
+                <img src="icons/message.svg" alt="Message" class="form-icon" />
+              </label>
+              <textarea id="message" cols="30" rows="10"></textarea>
             </div>
-            <button type="submit" aria-label="Send">Send</button>
+            <input type="submit" value="Send" />
         </fieldset>
     </form>
     <img alt="Phone" src="icons/phone.svg" class="phone-icon" /> +52 (333) 45 34 567
@@ -118,20 +91,20 @@ legend {
   margin-bottom: 15px;
 }
 
+label {
+  margin-bottom: 6px;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+}
+
 .form-icon {
   width: 22px;
   height: 22px;
   margin-top: 0 !important;
-  margin-bottom: 6px;
+  margin-bottom: 0;
   vertical-align: middle;
-  cursor: pointer;
-  align-self: flex-start;
-}
-
-.form-icon:focus {
-  outline: 2px solid #2a9d8f;
-  outline-offset: 2px;
-  border-radius: 4px;
 }
 
 /* Inputs and textarea */
@@ -152,8 +125,7 @@ textarea:focus {
 }
 
 /* Submit button */
-input[type="submit"],
-button[type="submit"] {
+input[type="submit"] {
   background-color: #20796F;
   color: white;
   border: none;
@@ -165,8 +137,7 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover,
-button[type="submit"]:hover {
+input[type="submit"]:hover {
   background-color: #21867a;
 }
 
