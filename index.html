@@ -35,7 +35,7 @@
               </label>
               <textarea id="message" cols="30" rows="10"></textarea>
             </div>
-            <input type="submit" value="Send" />
+            <button type="submit" aria-label="Send">Send</button>
         </fieldset>
     </form>
     <img alt="Phone" src="icons/phone.svg" class="phone-icon" /> +52 (333) 45 34 567
@@ -125,7 +125,8 @@ textarea:focus {
 }
 
 /* Submit button */
-input[type="submit"] {
+input[type="submit"],
+button[type="submit"] {
   background-color: #20796F;
   color: white;
   border: none;
@@ -137,7 +138,8 @@ input[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+button[type="submit"]:hover {
   background-color: #21867a;
 }
 
