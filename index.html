@@ -12,30 +12,29 @@
   <main>
     <h2> ARIA exercise 1 </h2>
     
-    <form>
+    <form >
           <fieldset>
             <legend> Contact us </legend>
+
             <div class="form-control">
-              <label for="name" aria-label="Name">
-                <img src="icons/user.svg" alt="Name" class="form-icon" />
-              </label>
-              <input type="text" id="name" />
+              <label for="name">
+              <img src="images/usuario.png" alt="" /> </label>
+              <input type="text" id="name" aria-label="Name of the user" />
             </div>
 
             <div class="form-control">
-              <label for="email" aria-label="e-mail">
-                <img src="icons/email.svg" alt="e-mail" class="form-icon" />
-              </label>
-              <input type="text" id="email" />
+              <label for="email">
+              <img src="images/correo-electronico.png" alt="" /> </label>
+              <input type="text" id="email" aria-label="Email of the user" />
             </div>
 
             <div class="form-control">
-              <label for="message" aria-label="Message">
-                <img src="icons/message.svg" alt="Message" class="form-icon" />
-              </label>
-              <textarea id="message" cols="30" rows="10"></textarea>
+              <label for="message">
+              <img src="images/burbuja-de-dialogo.png" alt="" /> </label>
+              <textarea id="message" cols="30" rows="10" aria-label="Message"
+              ></textarea>
             </div>
-            <button type="submit" id="submit" name="submit" value="Send" aria-label="Send" title="Send">Send</button>
+            <input role="button" type="submit" value="Send" aria-label="Send message" />
         </fieldset>
     </form>
     <img alt="Phone" src="icons/phone.svg" class="phone-icon" /> +52 (333) 45 34 567
@@ -99,7 +98,7 @@ label {
   cursor: pointer;
 }
 
-.form-icon {
+label img {
   width: 22px;
   height: 22px;
   margin-top: 0 !important;
@@ -125,8 +124,7 @@ textarea:focus {
 }
 
 /* Submit button */
-input[type="submit"],
-button[type="submit"] {
+input[type="submit"] {
   background-color: #20796F;
   color: white;
   border: none;
@@ -138,8 +136,7 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover,
-button[type="submit"]:hover {
+input[type="submit"]:hover {
   background-color: #21867a;
 }
 
